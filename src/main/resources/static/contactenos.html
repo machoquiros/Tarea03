@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contáctenos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h1>Contacto</h1>
+        <h3>¡Estamos a sus órdenes, para nosotros será un placer servirle!</h3>
+        
+        <div class="div_form">
+            <div class="contacto_form">
+                <h2>Contáctenos</h2>
+                <form th:action="@{/guardarCliente}" 
+                      method="post" 
+                      th:object="${cliente}" class="form">
+                    <input type="hidden" name="idcliente" th:field="*{idcliente}">
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" name="nombre" th:field="*{nombre}"/>
+                    <br><br>
+                    <label for="apellidos">Apellidos: </label>
+                    <input type="text" name="apellidos" th:field="*{apellidos}"/>
+                    <br><br>
+                    <label for="correo">Correos: </label>
+                    <input type="email" name="correo" th:field="*{correo}"/>
+                    <br><br>
+                    <label for="telefono">Telefono: </label>
+                    <input type="tel" name="telefono" th:field="*{telefono}"/>
+                    <br><br>
+                    <input type="submit" name="guardar" value="Guardar Registro" class="cta_form"/>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

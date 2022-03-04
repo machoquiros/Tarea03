@@ -1,2 +1,37 @@
+/*CSS del Contactenos*/
+.div_form{
+    background-color: #183c81;
+    color: white;
+    border-color: transparent;
+    width: 40%;
+    margin: 10px;
+    border-radius: 16px;
+}
+.contacto_form{
+    padding: 15px;
+}
+.form{
+    padding-left: 30px;
+}
+.cta_form{
+    margin-left: 300px;
+    border-radius: 16px;
+    background-color: #b3ca35;
+    border-color: #a1b630;
+    color: white;
+    padding: 5px;
+}
+.cta_form:hover{
+    margin-left: 300px;
+    border-radius: 16px;
+    background-color: #8d9f2d;
+    border-color: #a1b630;
+    color: white;
+    padding: 5px;
+}
 
+/*Fin CSS del Contactenos*/
 
+h1{
+    color: #183c81;
+}
