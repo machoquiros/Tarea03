@@ -25,8 +25,8 @@ public class Contacto implements Serializable {
     public Contacto() {
     }
 
-    public Contacto(Long id_contacto, String nombre_contacto, String apellidos_contacto, String correo_contacto, String telefono_contacto) {
-        this.id_contacto = id_contacto;
+    public Contacto(String nombre_contacto, String apellidos_contacto, String correo_contacto, String telefono_contacto) {
+        
         this.nombre_contacto = nombre_contacto;
         this.apellidos_contacto = apellidos_contacto;
         this.correo_contacto = correo_contacto;

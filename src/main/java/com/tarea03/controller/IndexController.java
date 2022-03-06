@@ -26,10 +26,6 @@ public class IndexController {
     
     @RequestMapping("/")
     public String inicio(Model model) {
-        log.info("Ahora se usa la arquitectura MVC");
-
-        var recetas = recetaDao.findAll();
-        model.addAttribute("recetas", recetas);
         return "index";
     }
 

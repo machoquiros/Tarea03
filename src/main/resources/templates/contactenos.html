@@ -18,21 +18,21 @@
                 <form th:action="@{/guardarContacto}" 
                       method="post" 
                       th:object="${contacto}" class="form">
-                    <input type="hidden" name="id" th:field="*{id_contacto}">
+                    
                     <label for="nombre">Nombre: </label>
-                    <input type="text" name="nombre" th:field="*{nombre_contacto}"/>
+                    <input type="text" name="nombre_contacto"/>
                     <br><br>
                     <label for="apellidos">Apellidos: </label>
-                    <input type="text" name="apellidos" th:field="*{apellidos_contacto}"/>
+                    <input type="text" name="apellidos_contacto"/>
                     <br><br>
-                    <label for="correo">Correos: </label>
-                    <input type="email" name="correo" th:field="*{correo_contacto}"/>
+                    <label for="correo">Correo: </label>
+                    <input type="email" name="correo_contacto"/>
                     <br><br>
                     <label for="telefono">Telefono: </label>
-                    <input type="tel" name="telefono" th:field="*{telefono_contacto}"/>
+                    <input type="tel" name="telefono_contacto"/>
                     <br><br>
                     <input type="submit" name="guardar" value="Guardar Registro" class="cta_form"/>
-                </form>-->
+                </form>
             </div>
         </div>
     </body>
