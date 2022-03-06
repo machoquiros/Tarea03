@@ -10,30 +10,39 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @Slf4j
 public class IndexController {
-    
+
     @Autowired
     private RecetaDao recetaDao;
-    
+
     @RequestMapping("/")
-    public String inicio (Model model){
+    public String inicio(Model model) {
         log.info("Ahora se usa la arquitectura MVC");
-        
+
         var recetas = recetaDao.findAll();
         model.addAttribute("recetas", recetas);
         return "index";
     }
-    
-        @RequestMapping("/listar")
-    public String listar (Model model){
+
+    @RequestMapping("/listar")
+    public String listar(Model model) {
         log.info("Ahora se usa la arquitectura MVC");
-        
+
         var recetas = recetaDao.findAll();
         model.addAttribute("recetas", recetas);
         return "listar";
     }
-    
-        @RequestMapping("/contactenos")
-    public String contactenos (Model model){
+
+    @RequestMapping("/insertar")
+    public String insertar(Model model) {
+        log.info("Ahora se usa la arquitectura MVC");
+
+        var recetas = recetaDao.findAll();
+        model.addAttribute("recetas", recetas);
+        return "insertar";
+    }
+
+    @RequestMapping("/contactenos")
+    public String contactenos(Model model) {
 //        log.info("Ahora se usa la arquitectura MVC");
 //        
 //        var recetas = recetaDao.findAll();
