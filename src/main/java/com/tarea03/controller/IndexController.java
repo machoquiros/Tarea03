@@ -20,6 +20,15 @@ public class IndexController {
         
         var recetas = recetaDao.findAll();
         model.addAttribute("recetas", recetas);
+        return "index";
+    }
+    
+        @RequestMapping("/listar")
+    public String listar (Model model){
+        log.info("Ahora se usa la arquitectura MVC");
+        
+        var recetas = recetaDao.findAll();
+        model.addAttribute("recetas", recetas);
         return "listar";
     }
     
