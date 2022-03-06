@@ -15,21 +15,21 @@
         <div class="div_form">
             <div class="contacto_form">
                 <h2>Contáctenos</h2>
-               <!-- <form th:action="@{/guardarCliente}" 
+                <form th:action="@{/guardarContacto}" 
                       method="post" 
-                      th:object="${cliente}" class="form">
-                    <input type="hidden" name="idcliente" th:field="*{idcliente}">
+                      th:object="${contacto}" class="form">
+                    <input type="hidden" name="id" th:field="*{id_contacto}">
                     <label for="nombre">Nombre: </label>
-                    <input type="text" name="nombre" th:field="*{nombre}"/>
+                    <input type="text" name="nombre" th:field="*{nombre_contacto}"/>
                     <br><br>
                     <label for="apellidos">Apellidos: </label>
-                    <input type="text" name="apellidos" th:field="*{apellidos}"/>
+                    <input type="text" name="apellidos" th:field="*{apellidos_contacto}"/>
                     <br><br>
                     <label for="correo">Correos: </label>
-                    <input type="email" name="correo" th:field="*{correo}"/>
+                    <input type="email" name="correo" th:field="*{correo_contacto}"/>
                     <br><br>
                     <label for="telefono">Telefono: </label>
-                    <input type="tel" name="telefono" th:field="*{telefono}"/>
+                    <input type="tel" name="telefono" th:field="*{telefono_contacto}"/>
                     <br><br>
                     <input type="submit" name="guardar" value="Guardar Registro" class="cta_form"/>
                 </form>-->
