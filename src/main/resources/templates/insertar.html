@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+      <head>
+      <title>Lista recetas</title>
+      <meta charset="UTF-8">
+      <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header th:replace="layout/plantilla :: header"></header>
+    <h1>Lista de recetas</h1>
+    <br>
+    <a href="index.html">Regresar</a>
+    <br>
+    <br>
+    <div>HOLA TODOS</div>
+    <br>
+    <br>
+    <a href="listar.html">Listar</a>
+    <a href="contactenos.html">Contactenos</a>
+    <br>
+    <br>
+    <div th:if="${recetas != null and !recetas.empty}">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Duracion</th>
+                    <th>Dificultad</th>
+                    <th>Ingredientes</th>
+                    <th>Preparacion</th>
+                    <th>Calificacion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="receta : ${recetas}">
+                    <td th:text="${receta.id_receta}"></td>
+                    <td th:text="${receta.nombre_receta}"></td>
+                    <td th:text="${receta.duracion_receta}"></td>
+                    <td th:text="${receta.dificultad_receta}"></td>
+                    <td th:text="${receta.ingredientes_receta}"></td>
+                    <td th:text="${receta.preparacion_receta}"></td>
+                    <td th:text="${receta.calificacion_receta}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div th:if="${recetas == null or recetas.empty}">
+        No hay recetas que mostrar
+    </div>
+    <!--<form th:action="@{/guardarCliente} 
+          "method="POST"
+          th:object="${cliente}">
+        <input type="hidden" name="idcliente" th:field="*{id_receta}"/>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" th:field="*{nombre_receta}"/>
+        <br>
+        <br>
+        <label for="duracion">Duracion </label>
+        <input type="text" name="duracion" th:field="*{duracion_receta}"/>
+        <br>
+        <br>
+        <label for="dificultad">Dificultad </label>
+        <input type="email" name="dificultad" th:field="*{dificultad_receta}"/>
+        <br>
+        <br>
+        <label for="ingredientes">Ingredientes </label>
+        <input type="tel" name="ingredientes" th:field="*{ingredientes_receta}"/>
+        <br>
+        <br>
+        <label for="preparacion">Preparacion </label>
+        <input type="tel" name="preparacion" th:field="*{preparacion_receta}"/>
+        <br>
+        <br>
+        <label for="calificacion">Calificacion </label>
+        <input type="tel" name="calificacion" th:field="*{calificacion_receta}"/>
+        <br>
+        <br>
+    </form>
+    -->
+</body>
+</html>
