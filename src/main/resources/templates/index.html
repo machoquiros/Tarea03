@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+
+<html>
     <head>
-        <title>COMIDA</title>
+        <title>ArrozconMango</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../static/css/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="../static/css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>HOLA TODOS</div>
-        <br>
-        <br>
-        <a href="listar.html">Listar</a>
-        <a href="contactenos.html">Contactenos</a>
-        <br>
-        <br>
+        <header th:replace="layout/plantilla :: header"></header>    
+       
+        <div>
+            <figure>
+                <img src="image/portada.jpg" alt=""/>
+            </figure>
+        </div>
+        <footer th:replace="layout/plantilla :: footer"></footer>
     </body>
 </html>
