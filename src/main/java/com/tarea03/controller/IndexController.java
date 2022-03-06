@@ -22,4 +22,13 @@ public class IndexController {
         model.addAttribute("recetas", recetas);
         return "listar";
     }
+    
+        @RequestMapping("/contactenos")
+    public String contactenos (Model model){
+//        log.info("Ahora se usa la arquitectura MVC");
+//        
+//        var recetas = recetaDao.findAll();
+//        model.addAttribute("recetas", recetas);
+        return "contactenos";
+    }
 }
