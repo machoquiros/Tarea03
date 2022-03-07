@@ -8,34 +8,33 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class RecetaServiceImpl implements RecetaService{
-    
+public class RecetaServiceImpl implements RecetaService {
+
     @Autowired
     private RecetaDao recetaDao;
 
     @Override
-    @Transactional (readOnly = true)
+    @Transactional(readOnly = true)
     public List<Receta> getRecetas() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return (List<Receta>) recetaDao.findAll();
     }
 
     @Override
     @Transactional
     public void save(Receta receta) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        recetaDao.save(receta);
     }
 
     @Override
     @Transactional
     public void delete(Receta receta) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        recetaDao.delete(receta);
     }
 
     @Override
-    @Transactional (readOnly = true)
+    @Transactional(readOnly = true)
     public Receta getCliente(Receta receta) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return recetaDao.findById(receta.getId_receta()).orElse(null);
     }
-    
-    
+
 }

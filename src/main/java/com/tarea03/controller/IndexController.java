@@ -3,7 +3,9 @@ package com.tarea03.controller;
 import com.tarea03.dao.ContactoDao;
 import com.tarea03.dao.RecetaDao;
 import com.tarea03.domain.Contacto;
+import com.tarea03.domain.Receta;
 import com.tarea03.service.ContactoService;
+import com.tarea03.service.RecetaService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,13 +19,16 @@ public class IndexController {
 
     @Autowired
     private RecetaDao recetaDao;
-    
+
     @Autowired
     private ContactoService contactoService;
     
+        @Autowired
+    private RecetaService recetaService;
+
     @Autowired
     private ContactoDao contactoDao;
-    
+
     @RequestMapping("/")
     public String inicio(Model model) {
         return "index";
@@ -37,14 +42,25 @@ public class IndexController {
         model.addAttribute("recetas", recetas);
         return "listar";
     }
-    
+
+    @RequestMapping("/insertar")
+    public String insertar(Model model) {
+        return "insertar";
+    }
+
+    @PostMapping("/guardarReceta")
+    public String guardarReceta(Receta receta) {
+        recetaService.save(receta);
+        return "redirect:/";
+    }
+
     @RequestMapping("/contactenos")
-    public String contactenos (Model model){
+    public String contactenos(Model model) {
         return "contactenos";
-    }   
-    
+    }
+
     @PostMapping("/guardarContacto")
-    public String guardarContacto(Contacto contacto){
+    public String guardarContacto(Contacto contacto) {
         contactoService.save(contacto);
         return "redirect:/";
     }
