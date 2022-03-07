@@ -52,7 +52,7 @@ public class IndexController {
     @PostMapping("/guardarReceta")
     public String guardarReceta(Receta receta) {
         recetaService.save(receta);
-        return "redirect:/";
+        return "redirect:/listar";
     }
 
     @RequestMapping("/contactenos")
@@ -69,12 +69,12 @@ public class IndexController {
     public String modificarReceta(Receta receta, Model model) {
         var respuesta = recetaService.getReceta(receta);
         model.addAttribute("receta", respuesta);
-        return "insertar";
+        return "modificar";
     }
     
     @GetMapping("/eliminarReceta/{id_receta}")
     public String eliminarReceta(Receta receta){
         recetaService.delete(receta);
-        return "redirect:/listar/";
+        return "redirect:/listar";
     }
 }

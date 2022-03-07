@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Insertar Receta</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{../css/menu.css}" rel="stylesheet" />
+        <link th:href="@{../css/estilos.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"></header>
+        <h1>Insertar Receta</h1>
+
+        <div class="div_form">
+            <div class="contacto_form">
+                <h2>Nueva Receta</h2>
+                <form th:action="@{/guardarReceta}" 
+                      method="post" 
+                      th:object="${receta}" class="form">
+                    <input type="hidden" name="id_receta" th:field="*{id_receta}">
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" name="nombre_receta" th:field="*{nombre_receta}"/>
+                    <br><br>
+                    <label for="duracion">Duracion: </label>
+                    <input type="number" name="duracion_receta" th:field="*{duracion_receta}"/>
+                    <br><br>
+                    <label for="dificultad">Dificultad: </label>
+                    <input type="text" name="dificultad_receta" th:field="*{dificultad_receta}"/>
+                    <br><br>
+                    <label for="ingredientes">Ingredientes: </label>
+                    <input type="text" name="ingredientes_receta" th:field="*{ingredientes_receta}"/>
+                    <br><br>
+                    <label for="preparacion">Preparacion: </label>
+                    <input type="text" name="preparacion_receta" th:field="*{preparacion_receta}"/>
+                    <br><br>
+                    <label for="calificacion">Calificacion: </label>
+                    <input type="text" name="calificacion_receta" th:field="*{calificacion_receta}"/>
+                    <br><br>
+                    <input type="submit" name="guardar" value="Guardar Receta" class="cta_form"/>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
