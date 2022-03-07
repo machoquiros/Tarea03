@@ -11,6 +11,6 @@ public interface RecetaService {
 
     public void delete(Receta receta); //borra por medio del parametro id
 
-    public Receta getCliente(Receta receta); //obtiene un cliente por el id
+    public Receta getReceta (Receta receta); //obtiene un cliente por el id
 
 }

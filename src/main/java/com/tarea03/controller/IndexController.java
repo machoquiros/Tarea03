@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -64,5 +65,16 @@ public class IndexController {
         contactoService.save(contacto);
         return "redirect:/";
     }
-
+    @GetMapping("/modificarReceta/{id_receta}")
+    public String modificarReceta(Receta receta, Model model) {
+        var respuesta = recetaService.getReceta(receta);
+        model.addAttribute("receta", respuesta);
+        return "insertar";
+    }
+    
+    @GetMapping("/eliminarReceta/{id_receta}")
+    public String eliminarReceta(Receta receta){
+        recetaService.delete(receta);
+        return "listar";
+    }
 }

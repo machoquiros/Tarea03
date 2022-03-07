@@ -33,8 +33,7 @@ public class RecetaServiceImpl implements RecetaService {
 
     @Override
     @Transactional(readOnly = true)
-    public Receta getCliente(Receta receta) {
+    public Receta getReceta(Receta receta) {
         return recetaDao.findById(receta.getId_receta()).orElse(null);
     }
-
 }
