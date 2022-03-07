@@ -35,7 +35,7 @@
                         <td th:text="${receta.preparacion_receta}"></td>
                         <td th:text="${receta.calificacion_receta}"></td>
                         <td><a th:href="@{/modificarReceta/}">Modificar</a></td>
-                        <td><a th:href="@{/eliminarReceta/}+ ${item.id_receta}">Eliminar</a></td>
+                        <td><a th:href="@{/eliminarReceta/}+ ${receta.id_receta}">Eliminar</a></td>
                     </tr>
                     <tr>
                         <td style="text-align: center"><a th:href="@{/insertar}">Agregar Receta</a></td>

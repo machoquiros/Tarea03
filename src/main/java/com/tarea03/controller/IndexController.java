@@ -75,6 +75,6 @@ public class IndexController {
     @GetMapping("/eliminarReceta/{id_receta}")
     public String eliminarReceta(Receta receta){
         recetaService.delete(receta);
-        return "listar";
+        return "redirect:/listar/";
     }
 }
