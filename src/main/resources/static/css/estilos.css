@@ -1,11 +1,12 @@
 /*CSS del Contactenos*/
 .div_form{
-    background-color: #183c81;
+    background-color: #00768F;
     color: white;
     border-color: transparent;
     width: 40%;
     margin: 10px;
     border-radius: 16px;
+    display: block;
 }
 .contacto_form{
     padding: 15px;
@@ -33,7 +34,7 @@
 /*Fin CSS del Contactenos*/
 
 h1{
-    color: #183c81;
+    color: #00768F;
 }
 
 body{
@@ -50,7 +51,6 @@ table {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    /*border: 1px solid;*/
 }
 
 th, td {
@@ -58,3 +58,5 @@ th, td {
 }
 
 tr:hover {background-color: lightgrey;}
+
+
