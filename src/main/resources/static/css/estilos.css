@@ -45,4 +45,16 @@ body{
     margin-right: auto;
 }
 
+/*Estilo Lista de recetas*/
+table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid;*/
+}
 
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: lightgrey;}
