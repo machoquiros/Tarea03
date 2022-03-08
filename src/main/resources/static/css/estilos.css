@@ -6,8 +6,18 @@
     width: 40%;
     margin: 10px;
     border-radius: 16px;
-    display: block;
 }
+
+.papa{
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.mapa{
+    margin-left: 20px;
+}
+
 .contacto_form{
     padding: 15px;
 }
@@ -54,9 +64,21 @@ table {
 }
 
 th, td {
-  border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
-tr:hover {background-color: lightgrey;}
+tr:hover {
+    background-color: lightgrey;
+}
 
-
+/*Footer*/
+#piePagina{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 7%;
+    width: 100%;
+    background-color: gray;
+    color: black;
+    text-align: center;
+}
